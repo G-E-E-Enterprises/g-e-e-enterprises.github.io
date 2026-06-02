@@ -133,6 +133,19 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+    filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.2));
+}
+
+.logo-image:hover {
+    filter: drop-shadow(0 6px 16px rgba(99, 102, 241, 0.3));
+    transform: scale(1.05);
 }
 
 .logo-text {
@@ -737,6 +750,10 @@ section {
     .section-header {
         margin-bottom: 2rem;
     }
+
+    .logo-image {
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -787,6 +804,10 @@ section {
     .gradient-orb-2 {
         width: 200px;
         height: 200px;
+    }
+
+    .logo-image {
+        height: 35px;
     }
 }
 
