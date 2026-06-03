@@ -1,38 +1,57 @@
-# G.E.E. Enterprises
+# G.E.E. Enterprises Website & Portal
 
 ![G.E.E. Enterprises Logo](assets/logo.png)
 
-Greatly Enhanced Experience Enterprises
+This repository holds the code for the official website of **Greatly Enhanced Experience Enterprises (G.E.E. Enterprises)**, hosted publicly at [g-e-e-enterprises.github.io](https://g-e-e-enterprises.github.io/).
 
-Welcome to G.E.E. Enterprises, where premium mobile applications meet exceptional user experiences. We are committed to delivering innovative technology solutions that inspire and delight.
-
-## About Us
-
-G.E.E. Enterprises specializes in creating mobile applications designed with precision, quality, and user satisfaction at the forefront. Our mission is to enhance digital experiences through cutting-edge technology and thoughtful design.
-
-## Our Values
-
-- **User-Centric Design**: Every feature is designed with your needs in mind
-- **Quality Assurance**: Rigorous testing ensures reliability and performance
-- **Security First**: Enterprise-grade security measures protect your data
-- **Continuous Innovation**: Regular updates based on user feedback
-
-## Our Applications
-
-Discover our revolutionary mobile applications that combine intuitive design with powerful functionality. Our debut app is now available on the Google Play Store.
-
-[Download on Play Store](https://play.google.com/store)
-
-## Quick Links
-
-- [Privacy Policy](privacy-policy.html)
-- [Terms of Service](#)
-- [Contact Us](#)
-
-## Connect With Us
-
-Visit our website: [g-e-e-enterprises.github.io](https://g-e-e-enterprises.github.io/)
+The website showcases the organization's focus on premium, user-centric **Utility & Productivity** and **Social Interaction** applications, featuring our flagship product: **Tracking Toolkit: Time & Count**.
 
 ---
 
-&copy; 2024-2026 G.E.E. Enterprises. All rights reserved. | Greatly Enhanced Experience
+## Repository Structure
+
+The website is designed with a lightweight, framework-free architecture using pure semantic HTML5 and vanilla CSS.
+
+```text
+├── index.html            # Main landing page & product showcase
+├── styles.css            # Custom CSS design system (HSL tokens, mockup, responsiveness)
+├── privacy-policy.html   # Privacy documentation for G.E.E. local-first apps
+└── assets/
+    └── logo.png          # Main corporate logo asset
+```
+
+### Core Components
+
+* **Design System (`styles.css`)**: Built using custom HSL tokens, featuring dark-mode defaults, glassmorphic card overlays, responsive fluid typography via `clamp()`, and smooth micro-animations.
+* **Smartphone Mockup**: A pure HTML/CSS representation of the **Tracking Toolkit** dashboard inside a responsive viewport frame, showing stopwatches, counters, checklists, and rule bubbles.
+* **Contact Form**: An accessible interactive contact form with custom validation states using `:user-invalid` styling.
+* **Product Roadmap**: Highlights upcoming releases for both the Utility and Social divisions.
+
+---
+
+## Local Development & Testing
+
+To run the site locally and inspect layout changes in real-time, you can spin up a static server in this directory.
+
+### Option A: Using Browser Sync (Recommended for Hot Reload)
+Run this command from the repository root:
+```bash
+npx browser-sync start --server --files "*"
+```
+
+### Option B: Using Python's Built-in Server
+If you have Python installed, run:
+```bash
+python3 -m http.server 8080
+```
+Then, open your web browser and navigate to `http://localhost:8080`.
+
+---
+
+## Deployment
+
+Since this repository is named `g-e-e-enterprises.github.io`, it is configured for automatic deployment via **GitHub Pages**.
+
+1. Commit your changes directly to the `main` branch.
+2. Push your commits to GitHub.
+3. GitHub Actions will automatically compile the build and update the live website within a few minutes.
