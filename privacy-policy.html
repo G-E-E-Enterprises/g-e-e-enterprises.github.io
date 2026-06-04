@@ -6,8 +6,10 @@
     <meta name="description" content="Privacy Policy for G.E.E. Enterprises applications and services.">
     <meta name="theme-color" content="#0f1419">
     
-    <title>Privacy Policy | G.E.E. Enterprises</title>
+    <title data-i18n="privacy_title">Privacy Policy | G.E.E. Enterprises</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="translations.js" defer></script>
+    <script src="i18n.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -124,228 +126,245 @@
                 <div class="logo">
                     <span class="logo-text">G.E.E.</span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#home" class="nav-link">Home</a></li>
-                    <li><a href="index.html#app" class="nav-link">App</a></li>
-                    <li><a href="index.html#features" class="nav-link">Features</a></li>
-                    <li><a href="#" class="nav-link active">Privacy</a></li>
-                </ul>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="index.html#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#app" class="nav-link" data-i18n="nav.app">App</a></li>
+                        <li><a href="index.html#philosophy" class="nav-link" data-i18n="nav.philosophy">Philosophy</a></li>
+                        <li><a href="#" class="nav-link active" data-i18n="nav.privacy">Privacy</a></li>
+                    </ul>
+                    <div class="lang-selector">
+                        <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
+                            <span class="lang-flag" id="current-lang-flag">🇺🇸</span>
+                            <span class="lang-text" id="current-lang-text">English</span>
+                            <svg class="lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="lang-dropdown" role="menu">
+                            <button class="lang-option" data-lang="en" role="menuitem">🇺🇸 English</button>
+                            <button class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</button>
+                            <button class="lang-option" data-lang="de" role="menuitem">🇩🇪 Deutsch</button>
+                            <button class="lang-option" data-lang="fr" role="menuitem">🇫🇷 Français</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Privacy Policy Content -->
     <main class="privacy-container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-link" data-i18n="privacy.back_link">← Back to Home</a>
 
         <div class="privacy-header">
-            <h1>Privacy Policy</h1>
-            <p>Last updated: June 2, 2026</p>
+            <h1 data-i18n="privacy.title">Privacy Policy</h1>
+            <p data-i18n="privacy.last_updated">Last updated: June 2, 2026</p>
         </div>
 
         <div class="last-updated">
-            <strong>Effective Date:</strong> June 2, 2026. This Privacy Policy outlines how G.E.E. Enterprises collects, uses, and protects your personal information.
+            <strong data-i18n="privacy.effective_date_label">Effective Date:</strong> <span data-i18n="privacy.effective_date_desc">June 2, 2026. This Privacy Policy outlines how G.E.E. Enterprises collects, uses, and protects your personal information.</span>
         </div>
 
         <div class="privacy-content">
             <div class="privacy-section">
-                <h2>1. Introduction</h2>
-                <p>
+                <h2 data-i18n="privacy.sec1_title">1. Introduction</h2>
+                <p data-i18n="privacy.sec1_p1">
                     Welcome to G.E.E. Enterprises ("we," "us," "our," or "Company"). At G.E.E. Enterprises, we are committed to protecting your privacy and ensuring you have a positive experience on our website and applications. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our mobile applications.
                 </p>
-                <p>
+                <p data-i18n="privacy.sec1_p1_extra">
                     We are not in the business of data collection. In general, and especially if one of our products claims to not collect your information, we only ever collect what is strictly necessary (and obviously so) for the product to work as intended.
                 </p>
-                <p>
+                <p data-i18n="privacy.sec1_p2">
                     Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our services. Your continued use of our services following the posting of revised Privacy Policy means that you accept and agree to the changes.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>2. Information We Collect</h2>
+                <h2 data-i18n="privacy.sec2_title">2. Information We Collect</h2>
                 
-                <h3>2.1 Information You Provide Directly</h3>
-                <p>We collect information that you voluntarily provide to us, including but not limited to:</p>
+                <h3 data-i18n="privacy.sec2_1_title">2.1 Information You Provide Directly</h3>
+                <p data-i18n="privacy.sec2_1_desc">We collect information that you voluntarily provide to us, including but not limited to:</p>
                 <ul>
-                    <li>Account registration information (name, email address, password)</li>
-                    <li>Profile information and preferences</li>
-                    <li>Contact information when you reach out to customer support</li>
-                    <li>Payment information for premium services</li>
-                    <li>Content you create or upload within our applications</li>
-                    <li>Survey responses and feedback</li>
+                    <li data-i18n="privacy.sec2_1_li1">Account registration information (name, email address, password)</li>
+                    <li data-i18n="privacy.sec2_1_li2">Profile information and preferences</li>
+                    <li data-i18n="privacy.sec2_1_li3">Contact information when you reach out to customer support</li>
+                    <li data-i18n="privacy.sec2_1_li4">Payment information for premium services</li>
+                    <li data-i18n="privacy.sec2_1_li5">Content you create or upload within our applications</li>
+                    <li data-i18n="privacy.sec2_1_li6">Survey responses and feedback</li>
                 </ul>
 
-                <h3>2.2 Information Collected Automatically</h3>
-                <p>When you access our services, we automatically collect certain information about your device and how you interact with our applications:</p>
+                <h3 data-i18n="privacy.sec2_2_title">2.2 Information Collected Automatically</h3>
+                <p data-i18n="privacy.sec2_2_desc">When you access our services, we automatically collect certain information about your device and how you interact with our applications:</p>
                 <ul>
-                    <li>Device identifiers and mobile advertising IDs</li>
-                    <li>Device operating system and version</li>
-                    <li>IP address and geolocation data</li>
-                    <li>App usage analytics and crash reports</li>
-                    <li>Features you use and actions you take</li>
-                    <li>Date and time stamps of your activities</li>
-                    <li>Referring website and pages visited</li>
+                    <li data-i18n="privacy.sec2_2_li1">Device identifiers and mobile advertising IDs</li>
+                    <li data-i18n="privacy.sec2_2_li2">Device operating system and version</li>
+                    <li data-i18n="privacy.sec2_2_li3">IP address and geolocation data</li>
+                    <li data-i18n="privacy.sec2_2_li4">App usage analytics and crash reports</li>
+                    <li data-i18n="privacy.sec2_2_li5">Features you use and actions you take</li>
+                    <li data-i18n="privacy.sec2_2_li6">Date and time stamps of your activities</li>
+                    <li data-i18n="privacy.sec2_2_li7">Referring website and pages visited</li>
                 </ul>
 
-                <h3>2.3 Information from Third Parties</h3>
-                <p>
+                <h3 data-i18n="privacy.sec2_3_title">2.3 Information from Third Parties</h3>
+                <p data-i18n="privacy.sec2_3_desc">
                     We may receive information about you from third-party sources, including analytics providers, advertising networks, and social media platforms when you integrate your account with our services.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>3. How We Use Your Information</h2>
-                <p>We use the information we collect for various purposes:</p>
+                <h2 data-i18n="privacy.sec3_title">3. How We Use Your Information</h2>
+                <p data-i18n="privacy.sec3_desc">We use the information we collect for various purposes:</p>
                 <ul>
-                    <li>To provide, maintain, and improve our services and applications</li>
-                    <li>To create and manage your user account</li>
-                    <li>To process transactions and send related information</li>
-                    <li>To send you technical notices and support messages</li>
-                    <li>To respond to your inquiries and provide customer support</li>
-                    <li>To send marketing communications (with your consent)</li>
-                    <li>To conduct analytics and monitor application performance</li>
-                    <li>To detect, prevent, and address fraud and security issues</li>
-                    <li>To personalize your experience and deliver targeted content</li>
-                    <li>To comply with legal obligations</li>
+                    <li data-i18n="privacy.sec3_li1">To provide, maintain, and improve our services and applications</li>
+                    <li data-i18n="privacy.sec3_li2">To create and manage your user account</li>
+                    <li data-i18n="privacy.sec3_li3">To process transactions and send related information</li>
+                    <li data-i18n="privacy.sec3_li4">To send you technical notices and support messages</li>
+                    <li data-i18n="privacy.sec3_li5">To respond to your inquiries and provide customer support</li>
+                    <li data-i18n="privacy.sec3_li6">To send marketing communications (with your consent)</li>
+                    <li data-i18n="privacy.sec3_li7">To conduct analytics and monitor application performance</li>
+                    <li data-i18n="privacy.sec3_li8">To detect, prevent, and address fraud and security issues</li>
+                    <li data-i18n="privacy.sec3_li9">To personalize your experience and deliver targeted content</li>
+                    <li data-i18n="privacy.sec3_li10">To comply with legal obligations</li>
                 </ul>
             </div>
 
             <div class="privacy-section">
-                <h2>4. How We Share Your Information</h2>
+                <h2 data-i18n="privacy.sec4_title">4. How We Share Your Information</h2>
                 
-                <h3>4.1 Service Providers</h3>
-                <p>
+                <h3 data-i18n="privacy.sec4_1_title">4.1 Service Providers</h3>
+                <p data-i18n="privacy.sec4_1_desc">
                     We may share your information with third-party service providers who perform services on our behalf, such as cloud hosting providers, analytics services, payment processors, and customer support platforms. These service providers are contractually obligated to use your information only as necessary to provide services to us.
                 </p>
 
-                <h3>4.2 Legal Requirements</h3>
-                <p>
+                <h3 data-i18n="privacy.sec4_2_title">4.2 Legal Requirements</h3>
+                <p data-i18n="privacy.sec4_2_desc">
                     We may disclose your information when required by law, such as in response to subpoenas, court orders, or other legal processes. We may also share information when we believe in good faith that disclosure is necessary to protect our rights, your safety, or the safety of others.
                 </p>
 
-                <h3>4.3 Business Transfers</h3>
-                <p>
+                <h3 data-i18n="privacy.sec4_3_title">4.3 Business Transfers</h3>
+                <p data-i18n="privacy.sec4_3_desc">
                     If G.E.E. Enterprises is involved in a merger, acquisition, bankruptcy, or sale of assets, your information may be transferred as part of that transaction. We will provide notice before your information becomes subject to a different privacy policy.
                 </p>
 
-                <h3>4.4 With Your Consent</h3>
-                <p>
+                <h3 data-i18n="privacy.sec4_4_title">4.4 With Your Consent</h3>
+                <p data-i18n="privacy.sec4_4_desc">
                     We may share your information with third parties when you provide explicit consent to do so for specific purposes.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>5. Data Security</h2>
-                <p>
+                <h2 data-i18n="privacy.sec5_title">5. Data Security</h2>
+                <p data-i18n="privacy.sec5_desc1">
                     We implement comprehensive security measures designed to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Our security measures include:
                 </p>
                 <ul>
-                    <li>Encryption of data in transit using SSL/TLS protocols</li>
-                    <li>Encryption of sensitive data at rest</li>
-                    <li>Regular security audits and vulnerability assessments</li>
-                    <li>Access controls and authentication mechanisms</li>
-                    <li>Employee training on data protection practices</li>
-                    <li>Compliance with industry security standards</li>
+                    <li data-i18n="privacy.sec5_li1">Encryption of data in transit using SSL/TLS protocols</li>
+                    <li data-i18n="privacy.sec5_li2">Encryption of sensitive data at rest</li>
+                    <li data-i18n="privacy.sec5_li3">Regular security audits and vulnerability assessments</li>
+                    <li data-i18n="privacy.sec5_li4">Access controls and authentication mechanisms</li>
+                    <li data-i18n="privacy.sec5_li5">Employee training on data protection practices</li>
+                    <li data-i18n="privacy.sec5_li6">Compliance with industry security standards</li>
                 </ul>
-                <p>
+                <p data-i18n="privacy.sec5_desc2">
                     However, no method of transmission over the Internet or electronic storage is completely secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee absolute security.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>6. Your Privacy Rights</h2>
+                <h2 data-i18n="privacy.sec6_title">6. Your Privacy Rights</h2>
                 
-                <h3>6.1 Access and Portability</h3>
-                <p>
+                <h3 data-i18n="privacy.sec6_1_title">6.1 Access and Portability</h3>
+                <p data-i18n="privacy.sec6_1_desc">
                     You have the right to request access to the personal information we hold about you and to receive a copy in a portable format.
                 </p>
 
-                <h3>6.2 Correction and Deletion</h3>
-                <p>
+                <h3 data-i18n="privacy.sec6_2_title">6.2 Correction and Deletion</h3>
+                <p data-i18n="privacy.sec6_2_desc">
                     You may request correction of inaccurate information or deletion of your personal information, subject to certain exceptions required by law or our legitimate business interests.
                 </p>
 
-                <h3>6.3 Marketing Communications</h3>
-                <p>
+                <h3 data-i18n="privacy.sec6_3_title">6.3 Marketing Communications</h3>
+                <p data-i18n="privacy.sec6_3_desc">
                     You may opt-out of receiving marketing emails by clicking the "unsubscribe" link in any marketing email or by adjusting your notification settings in your account preferences.
                 </p>
 
-                <h3>6.4 Cookie Preferences</h3>
-                <p>
+                <h3 data-i18n="privacy.sec6_4_title">6.4 Cookie Preferences</h3>
+                <p data-i18n="privacy.sec6_4_desc">
                     You can control cookies through your browser settings and may opt out of certain tracking technologies. Please note that disabling cookies may affect the functionality of our services.
                 </p>
 
-                <h3>6.5 Do Not Track Signals</h3>
-                <p>
+                <h3 data-i18n="privacy.sec6_5_title">6.5 Do Not Track Signals</h3>
+                <p data-i18n="privacy.sec6_5_desc">
                     Some browsers include a Do Not Track feature. We currently do not respond to DNT signals, as there is no industry standard for their recognition.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>7. Children's Privacy</h2>
-                <p>
+                <h2 data-i18n="privacy.sec7_title">7. Children's Privacy</h2>
+                <p data-i18n="privacy.sec7_desc">
                     Our services are not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will take steps to delete such information and terminate the child's account. Parents or guardians who believe their child has provided information to us should contact us immediately.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>8. Retention of Information</h2>
-                <p>
+                <h2 data-i18n="privacy.sec8_title">8. Retention of Information</h2>
+                <p data-i18n="privacy.sec8_desc">
                     We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When information is no longer needed, we securely delete or anonymize it. In some cases, we may retain limited information for legal compliance or dispute resolution.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>9. Third-Party Links and Services</h2>
-                <p>
+                <h2 data-i18n="privacy.sec9_title">9. Third-Party Links and Services</h2>
+                <p data-i18n="privacy.sec9_desc">
                     Our website and applications may contain links to third-party websites and services that are not operated by G.E.E. Enterprises. This Privacy Policy does not apply to third-party services, and we are not responsible for their privacy practices. We encourage you to review the privacy policies of any third-party services before providing your information.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>10. International Data Transfers</h2>
-                <p>
+                <h2 data-i18n="privacy.sec10_title">10. International Data Transfers</h2>
+                <p data-i18n="privacy.sec10_desc">
                     Your information may be transferred to and maintained on servers located in countries other than where you reside. These countries may have different data protection laws. By using our services, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection rules.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>11. Updates to This Privacy Policy</h2>
-                <p>
+                <h2 data-i18n="privacy.sec11_title">11. Updates to This Privacy Policy</h2>
+                <p data-i18n="privacy.sec11_desc">
                     We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Your continued use of our services following the posting of revised Privacy Policy constitutes your acceptance of those changes.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>12. Contact Us</h2>
-                <p>
+                <h2 data-i18n="privacy.sec12_title">12. Contact Us</h2>
+                <p data-i18n="privacy.sec12_desc">
                     If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
                 </p>
                 <p>
-                    <strong>G.E.E. Enterprises</strong><br>
-                    Email: privacy@g-e-e-enterprises.github.io<br>
-                    Website: https://g-e-e-enterprises.github.io<br>
+                    <strong data-i18n="privacy.sec12_li1">G.E.E. Enterprises</strong><br>
+                    <span data-i18n="privacy.sec12_li2">Email: privacy@g-e-e-enterprises.github.io</span><br>
+                    <span data-i18n="privacy.sec12_li3">Website: https://g-e-e-enterprises.github.io</span><br>
                 </p>
-                <p>
+                <p data-i18n="privacy.sec12_footer">
                     We will respond to your inquiry within 30 days of receipt. If you are not satisfied with our response, you may have the right to lodge a complaint with your local data protection authority.
                 </p>
             </div>
 
             <div class="privacy-section">
-                <h2>13. Additional Information for Specific Jurisdictions</h2>
+                <h2 data-i18n="privacy.sec13_title">13. Additional Information for Specific Jurisdictions</h2>
                 
-                <h3>13.1 European Union (GDPR)</h3>
-                <p>
+                <h3 data-i18n="privacy.sec13_1_title">13.1 European Union (GDPR)</h3>
+                <p data-i18n="privacy.sec13_1_desc">
                     If you are located in the EU, you have additional rights under the General Data Protection Regulation (GDPR), including the right to access, rectify, erase, and port your data. Our legal basis for processing your data includes your consent, performance of a contract, or legitimate business interests.
                 </p>
 
-                <h3>13.2 California (CCPA)</h3>
-                <p>
+                <h3 data-i18n="privacy.sec13_2_title">13.2 California (CCPA)</h3>
+                <p data-i18n="privacy.sec13_2_desc">
                     California residents have specific rights under the California Consumer Privacy Act (CCPA), including the right to know, delete, and opt-out of the sale of personal information. We do not sell personal information for monetary compensation, but we may share it with service providers in ways that may constitute a "sale" under CCPA.
                 </p>
 
-                <h3>13.3 Other Jurisdictions</h3>
-                <p>
+                <h3 data-i18n="privacy.sec13_3_title">13.3 Other Jurisdictions</h3>
+                <p data-i18n="privacy.sec13_3_desc">
                     If you are located in other jurisdictions with specific privacy laws, please review the applicable regulations for your region.
                 </p>
             </div>
@@ -357,29 +376,29 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>G.E.E. Enterprises</h4>
-                    <p>Creating exceptional digital experiences through innovative technology.</p>
+                    <h4 data-i18n="footer.about_title">G.E.E. Enterprises</h4>
+                    <p data-i18n="footer.about_text">Creating exceptional digital experiences through innovative technology.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.legal_title">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#app">App</a></li>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="index.html#home" data-i18n="footer.link_home">Home</a></li>
+                        <li><a href="index.html#app" data-i18n="footer.link_tt">App</a></li>
+                        <li><a href="index.html#features" data-i18n="footer.link_pillars">Features</a></li>
+                        <li><a href="#" data-i18n="footer.link_privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Legal</h4>
+                    <h4 data-i18n="footer.legal_title">Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#" data-i18n="footer.link_privacy">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#" data-i18n="footer.link_contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024-2026 G.E.E. Enterprises. All rights reserved. | Greatly Enhanced Experience</p>
+                <p data-i18n="footer.copyright">&copy; 2024-2026 G.E.E. Enterprises. All rights reserved. | Greatly Enhanced Experience</p>
             </div>
         </div>
     </footer>

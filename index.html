@@ -7,8 +7,10 @@
     <meta name="keywords" content="G.E.E. Enterprises, Greatly Enhanced Experience, Tracking Toolkit, mobile apps, personalization, ease of use, powerful features, aesthetics, local-first">
     <meta name="theme-color" content="#090d16">
     
-    <title>G.E.E. Enterprises | Greatly Enhanced Experience</title>
+    <title data-i18n="title">G.E.E. Enterprises | Greatly Enhanced Experience</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="translations.js" defer></script>
+    <script src="i18n.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -36,13 +38,30 @@
                     <img src="assets/logo.png" alt="G.E.E. Enterprises Logo" class="logo-image" id="nav-logo-img">
                     <span class="logo-text">G.E.E. <span class="logo-subtitle">Enterprises</span></span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
-                    <li><a href="#app" class="nav-link">Our App</a></li>
-                    <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
-                    <li><a href="#contact" class="nav-link btn btn-secondary btn-nav">Get in Touch</a></li>
-                </ul>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#philosophy" class="nav-link" data-i18n="nav.philosophy">Philosophy</a></li>
+                        <li><a href="#app" class="nav-link" data-i18n="nav.app">Our App</a></li>
+                        <li><a href="#roadmap" class="nav-link" data-i18n="nav.roadmap">Roadmap</a></li>
+                        <li><a href="#contact" class="nav-link btn btn-secondary btn-nav" data-i18n="nav.contact">Get in Touch</a></li>
+                    </ul>
+                    <div class="lang-selector">
+                        <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
+                            <span class="lang-flag" id="current-lang-flag">🇺🇸</span>
+                            <span class="lang-text" id="current-lang-text">English</span>
+                            <svg class="lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="lang-dropdown" role="menu">
+                            <button class="lang-option" data-lang="en" role="menuitem">🇺🇸 English</button>
+                            <button class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</button>
+                            <button class="lang-option" data-lang="de" role="menuitem">🇩🇪 Deutsch</button>
+                            <button class="lang-option" data-lang="fr" role="menuitem">🇫🇷 Français</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -52,13 +71,13 @@
         <div class="container">
             <div class="hero-content">
                 <div class="badge-container">
-                    <span class="hero-badge">G.E.E. Enterprises</span>
+                    <span class="hero-badge" data-i18n="hero.badge">G.E.E. Enterprises</span>
                 </div>
-                <h1 class="hero-title title-3-words"><span class="word-1-red">Greatly</span> <span class="word-2-gold">Enhanced</span> <span class="word-3-turquoise">Experience</span></h1>
-                <p class="hero-subtitle">Our main commitment is to the values of personalization, ease of use and powerful features, while not neglecting the aesthetic aspects of the experiences we endeavor to deliver.</p>
+                <h1 class="hero-title title-3-words" data-i18n="hero.title"><span class="word-1-red">Greatly</span> <span class="word-2-gold">Enhanced</span> <span class="word-3-turquoise">Experience</span></h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Our main commitment is to the values of personalization, ease of use and powerful features, while not neglecting the aesthetic aspects of the experiences we endeavor to deliver.</p>
                 <div class="hero-cta">
-                    <a href="#app" class="btn btn-primary" id="hero-explore-btn">Explore Our Flagship Utility App</a>
-                    <a href="#philosophy" class="btn btn-secondary" id="hero-philosophy-btn">Our Philosophy</a>
+                    <a href="#app" class="btn btn-primary" id="hero-explore-btn" data-i18n="hero.btn_explore">Explore Our Flagship Utility App</a>
+                    <a href="#philosophy" class="btn btn-secondary" id="hero-philosophy-btn" data-i18n="hero.btn_philosophy">Our Philosophy</a>
                 </div>
             </div>
         </div>
@@ -68,8 +87,8 @@
     <section id="philosophy" class="philosophy-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="title-3-words"><span class="word-1-red">Our</span> <span class="word-2-gold">core</span> <span class="word-3-turquoise">philosophy</span></h2>
-                <p>We believe that outstanding digital experiences are built at the intersection of capability, simplicity, and visual refinement.</p>
+                <h2 class="title-3-words" data-i18n="philosophy.title"><span class="word-1-red">Our</span> <span class="word-2-gold">core</span> <span class="word-3-turquoise">philosophy</span></h2>
+                <p data-i18n="philosophy.subtitle">We believe that outstanding digital experiences are built at the intersection of capability, simplicity, and visual refinement.</p>
             </div>
             
             <div class="philosophy-grid">
@@ -80,8 +99,8 @@
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3>Personalization</h3>
-                    <p>Experiences tailored to your unique preferences. Every feature adapts to how you work, learn, and create, offering flexible UI densities and custom parameters.</p>
+                    <h3 data-i18n="philosophy.personalization_title">Personalization</h3>
+                    <p data-i18n="philosophy.personalization_desc">Experiences tailored to your unique preferences. Every feature adapts to how you work, learn, and create, offering flexible UI densities and custom parameters.</p>
                 </div>
                 
                 <!-- Ease of Use -->
@@ -91,8 +110,8 @@
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3>Ease of Use</h3>
-                    <p>Intuitive interfaces that require no learning curve. We believe simplicity is the ultimate sophistication—hiding complexity behind natural, clean interactions.</p>
+                    <h3 data-i18n="philosophy.ease_of_use_title">Ease of Use</h3>
+                    <p data-i18n="philosophy.ease_of_use_desc">Intuitive interfaces that require no learning curve. We believe simplicity is the ultimate sophistication—hiding complexity behind natural, clean interactions.</p>
                 </div>
 
                 <!-- Powerful Features -->
@@ -102,8 +121,8 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3>Powerful Features</h3>
-                    <p>Advanced capabilities that empower you to accomplish more. Local-first databases, rule-based automation engines, and deep auditing logs accessible to everyone.</p>
+                    <h3 data-i18n="philosophy.powerful_features_title">Powerful Features</h3>
+                    <p data-i18n="philosophy.powerful_features_desc">Advanced capabilities that empower you to accomplish more. Local-first databases, rule-based automation engines, and deep auditing logs accessible to everyone.</p>
                 </div>
 
                 <!-- Aesthetic Excellence -->
@@ -113,8 +132,8 @@
                             <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61.18.23.23.53.13.82l-.45 1.34c-.18.54.34 1.05.88.88l1.34-.45c.29-.1.59-.05.82.13C10.18 20.5 11.08 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-4 8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm4-3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm4 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-4 7c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3>Aesthetic Excellence</h3>
-                    <p>Aesthetically refined experiences crafted with meticulous attention to detail. Form and function in perfect harmony—utilizing glassmorphism and organic transitions.</p>
+                    <h3 data-i18n="philosophy.aesthetic_excellence_title">Aesthetic Excellence</h3>
+                    <p data-i18n="philosophy.aesthetic_excellence_desc">Aesthetically refined experiences crafted with meticulous attention to detail. Form and function in perfect harmony—utilizing glassmorphism and organic transitions.</p>
                 </div>
             </div>
         </div>
@@ -124,9 +143,9 @@
     <section id="app" class="flagship-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Flagship Utility Application</span>
-                <h2>Tracking Toolkit: Time & Count</h2>
-                <p class="section-lead">A practical realization of our philosophy. Blend trackers, timers, and checklists with custom, local-first automation rules.</p>
+                <span class="section-badge" data-i18n="app.badge">Flagship Utility Application</span>
+                <h2 data-i18n="app.title">Tracking Toolkit: Time & Count</h2>
+                <p class="section-lead" data-i18n="app.lead">A practical realization of our philosophy. Blend trackers, timers, and checklists with custom, local-first automation rules.</p>
             </div>
             
             <div class="flagship-grid">
@@ -140,25 +159,25 @@
                                 <div class="app-header">
                                     <span class="app-logo">TT</span>
                                     <div class="app-title-group">
-                                        <span class="app-title">Tracking Toolkit</span>
-                                        <span class="app-subtitle">Dashboard</span>
+                                        <span class="app-title" data-i18n="app.showcase_title">Tracking Toolkit</span>
+                                        <span class="app-subtitle" data-i18n="app.showcase_subtitle">Dashboard</span>
                                     </div>
-                                    <span class="app-status-badge">Offline Safe</span>
+                                    <span class="app-status-badge" data-i18n="app.showcase_status">Offline Safe</span>
                                 </div>
                                 
                                 <div class="app-scrollable-content">
                                     <!-- Tag Filter Bar -->
                                     <div class="app-tags">
-                                        <span class="app-tag active">All</span>
-                                        <span class="app-tag">Kitchen</span>
-                                        <span class="app-tag">Labs</span>
-                                        <span class="app-tag">Daily</span>
+                                        <span class="app-tag active" data-i18n="app.showcase_tag_all">All</span>
+                                        <span class="app-tag" data-i18n="app.showcase_tag_kitchen">Kitchen</span>
+                                        <span class="app-tag" data-i18n="app.showcase_tag_labs">Labs</span>
+                                        <span class="app-tag" data-i18n="app.showcase_tag_daily">Daily</span>
                                     </div>
                                     
                                     <!-- Timer Card -->
                                     <div class="app-card app-card-timer">
                                         <div class="app-card-header">
-                                            <span class="app-card-title">Assay Reaction Timer</span>
+                                            <span class="app-card-title" data-i18n="app.showcase_timer_title">Assay Reaction Timer</span>
                                             <span class="app-card-icon">⏱</span>
                                         </div>
                                         <div class="timer-display-box">
@@ -169,15 +188,15 @@
                                             <div class="timer-digits">00:42.5</div>
                                         </div>
                                         <div class="timer-controls">
-                                            <span class="app-inner-btn play">Pause</span>
-                                            <span class="app-inner-btn lap">Lap 4</span>
+                                            <span class="app-inner-btn play" data-i18n="app.showcase_timer_pause">Pause</span>
+                                            <span class="app-inner-btn lap" data-i18n="app.showcase_timer_lap">Lap 4</span>
                                         </div>
                                     </div>
                                     
                                     <!-- Tally Counter Card -->
                                     <div class="app-card app-card-counter">
                                         <div class="app-card-header">
-                                            <span class="app-card-title">Sample Cycle Counter</span>
+                                            <span class="app-card-title" data-i18n="app.showcase_counter_title">Sample Cycle Counter</span>
                                             <span class="app-card-icon">🔢</span>
                                         </div>
                                         <div class="counter-body">
@@ -190,21 +209,21 @@
                                     <!-- Checklist Card -->
                                     <div class="app-card app-card-checklist">
                                         <div class="app-card-header">
-                                            <span class="app-card-title">Reagent Checklist</span>
+                                            <span class="app-card-title" data-i18n="app.showcase_checklist_title">Reagent Checklist</span>
                                             <span class="app-card-icon">✓</span>
                                         </div>
                                         <div class="checklist-items">
                                             <div class="check-item checked">
                                                 <span class="check-box">[x]</span>
-                                                <span class="check-label">Verify base solution</span>
+                                                <span class="check-label" data-i18n="app.showcase_checklist_item1">Verify base solution</span>
                                             </div>
                                             <div class="check-item checked">
                                                 <span class="check-box">[x]</span>
-                                                <span class="check-label">Inject core catalyst</span>
+                                                <span class="check-label" data-i18n="app.showcase_checklist_item2">Inject core catalyst</span>
                                             </div>
                                             <div class="check-item">
                                                 <span class="check-box">[ ]</span>
-                                                <span class="check-label">Seal container lid</span>
+                                                <span class="check-label" data-i18n="app.showcase_checklist_item3">Seal container lid</span>
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +231,7 @@
                                     <!-- Rule Notification -->
                                     <div class="app-rule-bubble">
                                         <span class="rule-icon">🔗</span>
-                                        <span class="rule-text">Rule: When Reaction Timer ends, add +1 to Cycle Counter.</span>
+                                        <span class="rule-text" data-i18n="app.showcase_rule_text">Rule: When Reaction Timer ends, add +1 to Cycle Counter.</span>
                                     </div>
                                 </div>
                             </div>
@@ -222,62 +241,62 @@
                 
                 <!-- App Information Content -->
                 <div class="flagship-content">
-                    <h3>Innovation at Your Fingertips</h3>
-                    <p class="flagship-desc">Our flagship utility application combines utility logic with clean, local-first architecture. It is built to adapt to you: providing personalization that fits your needs, ease of use that feels natural, and powerful features styled with aesthetic care.</p>
+                    <h3 data-i18n="app.innovation_title">Innovation at Your Fingertips</h3>
+                    <p class="flagship-desc" data-i18n="app.innovation_desc">Our flagship utility application combines utility logic with clean, local-first architecture. It is built to adapt to you: providing personalization that fits your needs, ease of use that feels natural, and powerful features styled with aesthetic care.</p>
                     
                     <div class="features-accordion">
                         <div class="accordion-item">
-                            <h4>🍳 Custom Element Builder</h4>
-                            <p>Mix and match stopwatches, countdown clocks, checklist items, and clicker counters on a single board. Adjust display density (Spacious, Compact, Dense) to fit your reading preference.</p>
+                            <h4 data-i18n="app.accordion_builder_title">🍳 Custom Element Builder</h4>
+                            <p data-i18n="app.accordion_builder_desc">Mix and match stopwatches, countdown clocks, checklist items, and clicker counters on a single board. Adjust display density (Spacious, Compact, Dense) to fit your reading preference.</p>
                         </div>
                         <div class="accordion-item">
-                            <h4>🔗 Configurable Automation Rules</h4>
-                            <p>Build automation without code. Connect elements so that completing checklists or hitting timer limits triggers audible alarms, tactile feedback, or changes in secondary counters.</p>
+                            <h4 data-i18n="app.accordion_rules_title">🔗 Configurable Automation Rules</h4>
+                            <p data-i18n="app.accordion_rules_desc">Build automation without code. Connect elements so that completing checklists or hitting timer limits triggers audible alarms, tactile feedback, or changes in secondary counters.</p>
                         </div>
                         <div class="accordion-item">
-                            <h4>🔒 Local-First Security</h4>
-                            <p>Privacy is key. Your habit, health, or laboratory records are stored locally in an encrypted database on your physical device. No accounts, no cloud sync, and no tracking cookies.</p>
+                            <h4 data-i18n="app.accordion_security_title">🔒 Local-First Security</h4>
+                            <p data-i18n="app.accordion_security_desc">Privacy is key. Your habit, health, or laboratory records are stored locally in an encrypted database on your physical device. No accounts, no cloud sync, and no tracking cookies.</p>
                         </div>
                         <div class="accordion-item">
-                            <h4>📊 Rich Timeline Ledger</h4>
-                            <p>Review completed logs in a detailed event history that documents ticks, tallies, and pauses down to the second.</p>
+                            <h4 data-i18n="app.accordion_ledger_title">📊 Rich Timeline Ledger</h4>
+                            <p data-i18n="app.accordion_ledger_desc">Review completed logs in a detailed event history that documents ticks, tallies, and pauses down to the second.</p>
                         </div>
                     </div>
 
                     <div class="use-cases-box">
-                        <h5>Versatile Workflow Examples:</h5>
+                        <h5 data-i18n="app.use_cases_title">Versatile Workflow Examples:</h5>
                         <div class="use-cases-grid">
                             <div class="use-case-item">
-                                <strong>🍳 Culinary Prep</strong>
-                                <span>Independent oven and stovetop timers linked to ingredients checks.</span>
+                                <strong data-i18n="app.use_case_1_title">🍳 Culinary Prep</strong>
+                                <span data-i18n="app.use_case_1_desc">Independent oven and stovetop timers linked to ingredients checks.</span>
                             </div>
                             <div class="use-case-item">
-                                <strong>🔬 Lab Experiments</strong>
-                                <span>Multi-instrument sample tallies tied to reaction clocks with automated increments.</span>
+                                <strong data-i18n="app.use_case_2_title">🔬 Lab Experiments</strong>
+                                <span data-i18n="app.use_case_2_desc">Multi-instrument sample tallies tied to reaction clocks with automated increments.</span>
                             </div>
                             <div class="use-case-item">
-                                <strong>🏋️ Interval Training</strong>
-                                <span>Rep counters triggering automated rest timers and screen pulses.</span>
+                                <strong data-i18n="app.use_case_3_title">🏋️ Interval Training</strong>
+                                <span data-i18n="app.use_case_3_desc">Rep counters triggering automated rest timers and screen pulses.</span>
                             </div>
                             <div class="use-case-item">
-                                <strong>💻 Sprint Tracking</strong>
-                                <span>Task checklists linked to development compile and testing timers.</span>
+                                <strong data-i18n="app.use_case_4_title">💻 Sprint Tracking</strong>
+                                <span data-i18n="app.use_case_4_desc">Task checklists linked to development compile and testing timers.</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="pricing-card border-glow-red">
                         <div class="pricing-info">
-                            <span class="pricing-badge">Early Adopter Discount</span>
-                            <h4>Lifetime Pro Unlock</h4>
-                            <p>Free version includes up to 15 tracking elements and standard ad placements. Upgrade to Pro for a one-time purchase to get unlimited elements, advanced rule sets, and soft-delete archiving.</p>
+                            <span class="pricing-badge" data-i18n="app.pricing_badge">Early Adopter Discount</span>
+                            <h4 data-i18n="app.pricing_title">Lifetime Pro Unlock</h4>
+                            <p data-i18n="app.pricing_desc">Free version includes up to 15 tracking elements and standard ad placements. Upgrade to Pro for a one-time purchase to get unlimited elements, advanced rule sets, and soft-delete archiving.</p>
                         </div>
                         <div class="pricing-price-box">
                             <span class="price-original">$7.99</span>
                             <span class="price-current">$4.99</span>
-                            <span class="price-frequency">One-Time Buy</span>
+                            <span class="price-frequency" data-i18n="app.pricing_frequency">One-Time Buy</span>
                             <a href="https://play.google.com/store" class="btn btn-primary btn-store" target="_blank" rel="noopener noreferrer">
-                                <span>Get on Play Store</span>
+                                <span data-i18n="app.pricing_btn">Get on Play Store</span>
                             </a>
                         </div>
                     </div>
@@ -290,43 +309,43 @@
     <section id="roadmap" class="roadmap-section">
         <div class="container">
             <div class="section-header">
-                <h2>Product Roadmap</h2>
-                <p>Future projects in active design, strictly guided by our core values.</p>
+                <h2 data-i18n="roadmap.title">Product Roadmap</h2>
+                <p data-i18n="roadmap.lead">Future projects in active design, strictly guided by our core values.</p>
             </div>
             
             <div class="roadmap-timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker bg-gradient-red"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Q3 2026</span>
-                        <h3>Tracking Toolkit Pro</h3>
-                        <span class="timeline-division text-red">Upgrades & New Features</span>
+                        <span class="timeline-date" data-i18n="roadmap.date_q3">Q3 2026</span>
+                        <h3 data-i18n="roadmap.q3_title">Tracking Toolkit Pro</h3>
+                        <span class="timeline-division text-red" data-i18n="roadmap.q3_division">Upgrades & New Features</span>
                         <br />
-                        <h4>Enhanced Analytics</h4>
-                        <p>Adding rich, locally-rendered charts (activity heatmaps, line graphs) directly in the dashboard, alongside CSV/JSON logging data export formats for laboratory and study use cases.</p>
+                        <h4 data-i18n="roadmap.q3_h4_1">Enhanced Analytics</h4>
+                        <p data-i18n="roadmap.q3_desc_1">Adding rich, locally-rendered charts (activity heatmaps, line graphs) directly in the dashboard, alongside CSV/JSON logging data export formats for laboratory and study use cases.</p>
                         <br />
-                        <h4>Multi-Tracker Dashboards</h4>
-                        <p>Control elements of multiple Trackers from a single view.</p>
+                        <h4 data-i18n="roadmap.q3_h4_2">Multi-Tracker Dashboards</h4>
+                        <p data-i18n="roadmap.q3_desc_2">Control elements of multiple Trackers from a single view.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-marker bg-gradient-turquoise"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Q4 2026</span>
-                        <h4>Socializing Platform (Final Design Stage)</h4>
-                        <span class="timeline-division text-turquoise">Smart Sharing</span>
-                        <p>A platform for building and managing deep personal profiles, smart sharing with advanced control and an emphasis on meeting people, building intimacy safely.</p>
+                        <span class="timeline-date" data-i18n="roadmap.date_q4">Q4 2026</span>
+                        <h4 data-i18n="roadmap.q4_title">Socializing Platform (Final Design Stage)</h4>
+                        <span class="timeline-division text-turquoise" data-i18n="roadmap.q4_division">Smart Sharing</span>
+                        <p data-i18n="roadmap.q4_desc">A platform for building and managing deep personal profiles, smart sharing with advanced control and an emphasis on meeting people, building intimacy safely.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker bg-gradient-turquoise"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Q1 2027</span>
-                        <h4>Game Development</h4>
-                        <span class="timeline-division text-turquoise">Coming soon</span>
-                        <p>Stay tuned for the unveiling of our game concepts!</p>
+                        <span class="timeline-date" data-i18n="roadmap.date_q1">Q1 2027</span>
+                        <h4 data-i18n="roadmap.q1_title">Game Development</h4>
+                        <span class="timeline-division text-turquoise" data-i18n="roadmap.q1_division">Coming soon</span>
+                        <p data-i18n="roadmap.q1_desc">Stay tuned for the unveiling of our game concepts!</p>
                     </div>
                 </div>
             </div>
@@ -338,9 +357,9 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2 class="title-3-words"><span class="word-1-red">Get</span> <span class="word-2-gold">in</span> <span class="word-3-turquoise">Touch</span></h2>
-                    <p>Have questions about Tracking Toolkit, feedback on our philosophy, or beta suggestions? Contact G.E.E. Enterprises using our form.</p>
-                    <p>Leave us a comment, review or feature request in the Play Store!</p>
+                    <h2 class="title-3-words" data-i18n="contact.title"><span class="word-1-red">Get</span> <span class="word-2-gold">in</span> <span class="word-3-turquoise">Touch</span></h2>
+                    <p data-i18n="contact.text">Have questions about Tracking Toolkit, feedback on our philosophy, or beta suggestions? Contact G.E.E. Enterprises using our form.</p>
+                    <p data-i18n="contact.subtext">Leave us a comment, review or feature request in the Play Store!</p>
                     <!--div class="contact-details">
                         <div class="detail-item">
                             <span class="detail-icon">✉</span>
@@ -357,32 +376,32 @@
                     <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="d55fae95-4f2b-48c2-94e6-77d9e1834989">
                         <div class="form-group">
-                            <label for="user-name">Your Name</label>
-                            <input type="text" id="user-name" name="name" placeholder="John Doe" required>
+                            <label for="user-name" data-i18n="contact.label_name">Your Name</label>
+                            <input type="text" id="user-name" name="name" placeholder="John Doe" data-i18n-placeholder="contact.placeholder_name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="user-email">Email Address</label>
-                            <input type="email" id="user-email" name="email" placeholder="john@example.com" required>
+                            <label for="user-email" data-i18n="contact.label_email">Email Address</label>
+                            <input type="email" id="user-email" name="email" placeholder="john@example.com" data-i18n-placeholder="contact.placeholder_email" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="user-interest">Category of Interest</label>
+                            <label for="user-interest" data-i18n="contact.label_interest">Category of Interest</label>
                             <select id="user-interest" name="interest" required>
-                                <option value="" disabled selected>Select an option</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="tracking-toolkit">Tracking Toolkit Feedback</option>
-                                <option value="philosophy">Philosophy Collaboration</option>
-                                <option value="beta-testing">Beta Access Request</option>
+                                <option value="" disabled selected data-i18n="contact.placeholder_interest">Select an option</option>
+                                <option value="general" data-i18n="contact.opt_general">General Inquiry</option>
+                                <option value="tracking-toolkit" data-i18n="contact.opt_feedback">Tracking Toolkit Feedback</option>
+                                <option value="philosophy" data-i18n="contact.opt_philosophy">Philosophy Collaboration</option>
+                                <option value="beta-testing" data-i18n="contact.opt_beta">Beta Access Request</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="user-message">Your Message</label>
-                            <textarea id="user-message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                            <label for="user-message" data-i18n="contact.label_message">Your Message</label>
+                            <textarea id="user-message" name="message" rows="5" placeholder="How can we help you?" data-i18n-placeholder="contact.placeholder_message" required></textarea>
                         </div>
                         
-                        <button type="submit" id="contact-form-submit" class="btn btn-primary btn-full">Send Message</button>
+                        <button type="submit" id="contact-form-submit" class="btn btn-primary btn-full" data-i18n="contact.btn_submit">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -394,31 +413,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>G.E.E. Enterprises</h4>
-                    <p>Creating premium digital experiences through clean engineering, custom utility, and visual elegance.</p>
+                    <h4 data-i18n="footer.about_title">G.E.E. Enterprises</h4>
+                    <p data-i18n="footer.about_text">Creating premium digital experiences through clean engineering, custom utility, and visual elegance.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Philosophy</h4>
+                    <h4 data-i18n="footer.philosophy_title">Philosophy</h4>
                     <ul>
-                        <li><a href="#philosophy">Core Pillars</a></li>
-                        <li><a href="privacy-policy.html">Data Privacy</a></li>
+                        <li><a href="#philosophy" data-i18n="footer.link_pillars">Core Pillars</a></li>
+                        <li><a href="privacy-policy.html" data-i18n="footer.link_data">Data Privacy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Legal & Links</h4>
+                    <h4 data-i18n="footer.legal_title">Legal & Links</h4>
                     <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#app">Tracking Toolkit</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="privacy-policy.html" data-i18n="footer.link_privacy">Privacy Policy</a></li>
+                        <li><a href="#home" data-i18n="footer.link_home">Home</a></li>
+                        <li><a href="#app" data-i18n="footer.link_tt">Tracking Toolkit</a></li>
+                        <li><a href="#contact" data-i18n="footer.link_contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024-2026 G.E.E. Enterprises. All rights reserved. | Greatly Enhanced Experience</p>
+                <p data-i18n="footer.copyright">&copy; 2024-2026 G.E.E. Enterprises. All rights reserved. | Greatly Enhanced Experience</p>
             </div>
         </div>
-    </footer >
+    </footer>
 
     <script>
         // Smooth scrolling for navigation links
@@ -566,15 +585,20 @@
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const submitBtn = document.getElementById('contact-form-submit');
+                const currentLang = document.documentElement.getAttribute('lang') || 'en';
+                const sendingText = (translations[currentLang] && translations[currentLang].contact && translations[currentLang].contact.status_sending) || 'Sending...';
+                const sentText = (translations[currentLang] && translations[currentLang].contact && translations[currentLang].contact.status_sent) || 'Message Sent!';
+                const defaultText = (translations[currentLang] && translations[currentLang].contact && translations[currentLang].contact.btn_submit) || 'Send Message';
+                
                 if (submitBtn) {
-                    submitBtn.textContent = 'Sending...';
+                    submitBtn.textContent = sendingText;
                     submitBtn.disabled = true;
                     setTimeout(() => {
-                        submitBtn.textContent = 'Message Sent!';
+                        submitBtn.textContent = sentText;
                         submitBtn.style.background = 'var(--accent-turquoise)';
                         contactForm.reset();
                         setTimeout(() => {
-                            submitBtn.textContent = 'Send Message';
+                            submitBtn.textContent = defaultText;
                             submitBtn.style.background = 'var(--gradient-primary)';
                             submitBtn.disabled = false;
                         }, 3000);
