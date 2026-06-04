@@ -392,7 +392,7 @@ a:hover {
     border: 1px solid var(--border-color);
     border-radius: 0.6rem;
     padding: 0.4rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.25rem;
     z-index: 1100;
@@ -406,6 +406,7 @@ a:hover {
 }
 
 .lang-dropdown.show {
+    display: flex;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
